@@ -11,6 +11,11 @@ with open("numbers.txt") as number_file, open("even.txt","a") as even_num,open("
     for line in number_file:
         input_num = int(line)
         if input_num % 2 == 0:
+            # if even append to files and print,
+            even_num.write(str(input_num)+"\n")
             print("Even number written:",input_num)
         else:
+            # if odd append to files and print,
+            odd_num.write(str(input_num)+"\n")
             print("Odd number written:",input_num)
+print("Done writing output to each files.")
