@@ -5,6 +5,12 @@
 #The second text file will be named odd.txt that will contains all odd numbers 
 #extracted from the numbers.txt.
 
+# change colors in output
+yellow ="\033[1;33m"
+light_blue ="\033[1;34m"
+orange ="\033[4;32m"
+white = "\033[1;37m"
+
 # open numbers.txt (read), even.txt (append), odd.txt (append)
 with open("numbers.txt") as number_file, open("even.txt","a") as even_num,open("odd.txt","a") as odd_num:
     # read numbers.txt each line
@@ -13,9 +19,14 @@ with open("numbers.txt") as number_file, open("even.txt","a") as even_num,open("
         if input_num % 2 == 0:
             # if even append to files and print,
             even_num.write(str(input_num)+"\n")
-            print("Even number written:",input_num)
+            print(yellow + "Even number written:",input_num)
+            
         else:
             # if odd append to files and print,
             odd_num.write(str(input_num)+"\n")
-            print("Odd number written:",input_num)
-print("Done writing output to each files.")
+            print(light_blue + "Odd number written:",input_num)
+
+print("\n"+ orange +"Done writing output to each files.")
+#add enpty output to change the font color 
+#so that it will not conflict with the other output
+print(white)
