@@ -12,7 +12,7 @@ orange ="\033[4;32m"
 white = "\033[1;37m"
 
 # open numbers.txt (read), even.txt (append), odd.txt (append)
-with open("numbers.txt") as number_file, open("even.txt","a") as even_num,open("odd.txt","a") as odd_num:
+with open("numbers.txt") as number_file, open("even.txt","w") as even_num,open("odd.txt","w") as odd_num:
     # read numbers.txt each line
     for line in number_file:
         input_num = int(line)
